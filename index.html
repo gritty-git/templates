@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="gallery/title-logo.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Prastuti | A nice tagline</title>
+</head>
+<body>
+    <div id="navbar">
+        <a href="#top-section" class="navbar-item">Home</a>
+        <a href="#content" class="navbar-item">About Us</a>
+        <a class="navbar-item">Sign In</a>
+        <a class="navbar-item">Register</a>
+    </div>
+    <div id="top-section">
+        <video id="bg-video" src="./gallery/Circuit Board Background.mp4" autoplay loop muted>
+        </video>
+        <div id="overlay">
+            <h1 class="display-1">Prastuti - A nice tagline</h1>
+            <h1 class="display-5">Official tech-fest of Electrical department, IIT BHU</h1>
+            <a href="#content" id="get-started">Get Started<i class="fas fa-chevron-down ml-3"></i></i></a>
+        </div>
+    </div>
+    <div id="content">
+        <h1 class="dispay-1">Hello World</h1>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 1000,
+            speedAsDuration: true
+        });
+    </script>
+</body>
+</html>
