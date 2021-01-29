@@ -1,124 +1,180 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    overflow-x: hidden;
-    font-family: 'Quicksand', sans-serif;
+  overflow-x: hidden;
+  font-family: 'Quicksand', sans-serif;
 }
 
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #navbar {
-    position: fixed;
-    z-index: 100;
-    justify-content: flex-end;
-    display: flex;
-    width: 100%;
-    padding : 30px 40px;
-    transition: all ease 0.8s;
+  position: fixed;
+  z-index: 100;
+  justify-content: flex-end;
+  display: flex;
+  width: 100%;
+  padding: 30px 40px;
+  transition: all ease 0.8s;
 }
 
 #navbar.scrolled {
-    background-color: rgba(255, 255, 255, 0.8);
+  background-color: #fff;
 }
 
 .navbar-item {
-    color: white!important;
-    margin: 0px 30px;
-    font-size: 1.4rem;
-    transition: all ease 0.8s;
-    cursor: pointer;
+  color: white !important;
+  margin: 0px 30px;
+  font-size: 1.4rem;
+  transition: all ease 0.8s;
+  cursor: pointer;
 }
 
 .navbar-item:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .navbar-item.scrolled {
-    color: black!important;
+  color: black !important;
 }
 
 #top-section {
-    position: relative;
-    right: 0;
-    width: 100%;
-    min-height: 100vh;
-    z-index: 2;
-    overflow: hidden;
-    max-height: 100vh;
+  position: relative;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 2;
+  overflow: hidden;
+  max-height: 100vh;
 }
 
-#bg-video
-{
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 1;
+#bg-video {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
 }
 
-#overlay
-{
-    z-index: 100;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.48);
-    mix-blend-mode: overlay;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 50px;
-    color: white;
+#overlay {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.48);
+  mix-blend-mode: overlay;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  color: white;
 }
 
 #get-started {
-    position: absolute;
-    bottom: 25px;
-    left: 40vw;
-    font-size: 1.6rem;
-    color: white;
+  position: absolute;
+  bottom: 25px;
+  left: 40vw;
+  font-size: 1.6rem;
+  color: white;
 }
 
 .fas {
+  font-size: 1rem;
+}
+
+.content {
+  min-height: 100vh;
+  background-color: black;
+  padding: 120px 40px;
+}
+
+.content2 {
+  min-height: 100vh;
+  background-color: #ccc;
+  padding: 120px 40px;
+}
+
+.footer-top {
+  padding: 60px 0 40px 0;
+  text-align: left;
+}
+.footer-top h3 {
+  padding-bottom: 10px;
+}
+
+.footer-bottom {
+  padding: 0px 0 20px 0;
+  
+}
+
+.footer-social a {
+  margin: 0 10px;
+  color: #bbb;
+  border: 0;
+}
+.footer-social a:hover,
+.footer-social a:focus {
+  color: #856dc0;
+  border: 0;
+}
+.footer-social i {
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+#department {
+  width: 500px;
+}
+#copyright {
+  font-size: 15px;
+  color: grey;
+}
+
+@media (max-width: 700px) {
+  .display-1 {
+    font-size: 1.9rem;
+  }
+  .display-5 {
+    font-size: 1.2rem;
+  }
+  #overlay {
+    padding: 20px;
+  }
+  .navbar-item {
     font-size: 1rem;
-}
-
-#content {
-    min-height: 100vh;
-    background-color: black;
-    padding: 120px 40px;
-}
-
-@media(max-width: 700px) {
-    .display-1{
-        font-size: 1.9rem;
-    }
-    .display-5 {
-        font-size: 1.2rem;
-    }
-    #overlay{
-        padding: 20px;
-    }
-    .navbar-item {
-        font-size: 1rem;
-        margin: 0px 10px;
-    }
-    #get-started {
-        font-size: 1rem;
-    }
-    #navbar{
-        padding-right: 10px;
-    }
+    margin: 0px 10px;
+  }
+  #get-started {
+    font-size: 1rem;
+  }
+  #navbar {
+    padding-right: 10px;
+  }
+  #department {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .footer-bottom {
+    padding: 0px 0 30px 0;
+  }
+  .footer-social{
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+  }
+  .footer-social i {
+    font-size: 20px;
+    vertical-align: middle;
+  }
 }
