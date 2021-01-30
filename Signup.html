@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://127.0.0.1:8000/users/signup/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Document</title>
+    <link rel=" stylesheet " href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body class="vsc-initialized">
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+          <ul class="nav navbar-nav">
+  
+            <li><a class="navbar-brand" href="http://127.0.0.1:8000/users/">INDEX</a></li>
+            <!--Remove before production-->
+            <li><a class="navbar-link" href="http://127.0.0.1:8000/admin/">Admin</a></li> 
+            <li><a class="navbar-link" href="http://127.0.0.1:8000/events/index">Events</a></li> 
+            <li><a class="navbar-link" href="http://127.0.0.1:8000/users/signup/">SignUp</a></li>
+
+            
+            
+                <li><a href="http://127.0.0.1:8000/users/logout/">Logout</a></li>
+            
+            
+          </ul>
+        </div>
+      </nav>
+   
+<h1>Signup Page</h1>
+<form action="http://127.0.0.1:8000/users/signup/%7Busers:usersignup%7D" method="POST">
+    <input type="hidden" name="csrfmiddlewaretoken" value="ypyX7bGZAoaQuUZIYGGwA9RLIeYbxdWaSn71Hd5ZCtkNre7weiUEOqNC0TsMbxzB">
+    <fieldset>
+        <label for="id_username">Username:</label><input type="text" name="username" maxlength="150" autofocus="" required="" id="id_username"><br><span class="helptext">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</span>
+<label for="id_email">Email:</label><input type="email" name="email" required="" id="id_email">
+<label for="id_password1">Password:</label><input type="password" name="password1" autocomplete="new-password" required="" id="id_password1"><br><span class="helptext"><ul><li>Your password can’t be too similar to your other personal information.</li><li>Your password must contain at least 8 characters.</li><li>Your password can’t be a commonly used password.</li><li>Your password can’t be entirely numeric.</li></ul></span>
+<label for="id_password2">Password confirmation:</label><input type="password" name="password2" autocomplete="new-password" required="" id="id_password2"><br><span class="helptext">Enter the same password as before, for verification.</span>
+        <label for="id_name">Name:</label><input type="text" name="name" maxlength="100" required="" id="id_name">
+<label for="id_institute">Institute:</label><input type="text" name="institute" maxlength="250" required="" id="id_institute">
+<label for="id_year">Year:</label><input type="number" name="year" required="" id="id_year">
+    </fieldset>
+    <button type="submit" ,="" value="Signup">Signup</button>
+</form>
+
+
+</body></html>
