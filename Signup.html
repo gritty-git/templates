@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0035)http://127.0.0.1:8000/users/signup/ -->
+<!-- saved from url=(0035)/users/signup/ -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <title>Document</title>
@@ -11,23 +11,18 @@
         <div class="container">
           <ul class="nav navbar-nav">
   
-            <li><a class="navbar-brand" href="http://127.0.0.1:8000/users/">INDEX</a></li>
-            <!--Remove before production-->
-            <li><a class="navbar-link" href="http://127.0.0.1:8000/admin/">Admin</a></li> 
-            <li><a class="navbar-link" href="http://127.0.0.1:8000/events/index">Events</a></li> 
-            <li><a class="navbar-link" href="http://127.0.0.1:8000/users/signup/">SignUp</a></li>
-
-            
-            
-                <li><a href="http://127.0.0.1:8000/users/logout/">Logout</a></li>
-            
+            <li><a class="navbar-brand" href="/index">INDEX</a></li>
+            <!--Remove before production--> 
+            <li><a class="navbar-link" href="/events/index.html">Events</a></li> 
+            <li><a class="navbar-link" href="/users/signup.html">SignUp</a></li>
+            <li><a href="/users/login.html">Login</a></li>
             
           </ul>
         </div>
       </nav>
    
 <h1>Signup Page</h1>
-<form action="http://127.0.0.1:8000/users/signup/%7Busers:usersignup%7D" method="POST">
+<form action="/users/signup/%7Busers:usersignup%7D" method="POST">
     <input type="hidden" name="csrfmiddlewaretoken" value="ypyX7bGZAoaQuUZIYGGwA9RLIeYbxdWaSn71Hd5ZCtkNre7weiUEOqNC0TsMbxzB">
     <fieldset>
         <label for="id_username">Username:</label><input type="text" name="username" maxlength="150" autofocus="" required="" id="id_username"><br><span class="helptext">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</span>
