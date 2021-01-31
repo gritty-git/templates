@@ -12,7 +12,6 @@ h1 {
 body {
   overflow-x: hidden;
   font-family: 'Quicksand', sans-serif;
-  margin-bottom: 80px;
 }
 
 a {
@@ -117,7 +116,7 @@ a:hover {
 
 #footer {
   background-color: #fff;
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
   bottom: 0;
 }
@@ -245,11 +244,9 @@ a:hover {
 }
 
 @media (max-width: 700px) {
-  body {
-    margin-bottom: 180px;
-  }
   #sign-up-container {
     padding-top: 100px;
+    padding-bottom: 150px;
   }
   #back-btn .msg {
     font-size: 1.3rem;
