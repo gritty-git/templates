@@ -8,6 +8,7 @@
 body {
   overflow-x: hidden;
   font-family: 'Quicksand', sans-serif;
+  margin-bottom: 240px;
 }
 
 a {
@@ -112,6 +113,9 @@ a:hover {
 
 #footer {
   background-color: #f5f5f5;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
 .footer-top {
   padding: 60px 0 40px 0;
@@ -172,10 +176,11 @@ a:hover {
 }
 
 #sign-up-container {
-  padding-top: 140px!important;
-  padding: 40px;
+  padding-top: 120px!important;
+  padding: 10px;
   display: flex;
   justify-content: center;
+  /* position: relative; */
 }
 
 #sign-up-container img {
@@ -183,8 +188,8 @@ a:hover {
   z-index: -100;
   position: absolute;
   opacity: 40%;
-  bottom: -250px;
-  right: -200px;
+  left: 0px;
+  bottom: 0px;
 }
 
 #sign-up-container .row {
@@ -201,12 +206,12 @@ a:hover {
   align-items: center;
 }
 
-#sign-up-container .col-7 {
+#sign-up-container .col-lg-7 {
   padding-right: 90px!important;
   align-items: flex-start;
 }
 
-#sign-up-container .col-7 .lead {
+#sign-up-container .col-lg-7 .lead {
   margin-top: 20px;
 }
 
@@ -219,7 +224,7 @@ a:hover {
   font-size: 0.8rem;
 }
 
-#sign-up-form .form-control {
+.form-control {
   background-color: #e6efff;
   border: none;
   border-radius: 10px;
@@ -227,25 +232,40 @@ a:hover {
   transition: all 0.3s ease-in-out;
 }
 
-#pass-instructions {
-}
-
-#sign-up-form .form-control:focus, #sign-up-form .form-control:hover {
+.form-control:focus, .form-control:hover {
   transform: scale(1.05);
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1200px) {
   #footer .container {
     min-width: 90%;
   }
 }
 
+@media (max-width: 1000px) {
+  #sign-up-container .col-lg-7 {
+    display: none;
+  }
+}
+
 @media (max-width: 700px) {
+  body {
+    margin-bottom: 300px;
+  }
+  #back-btn .msg {
+    font-size: 1.3rem;
+  }
+  #back-btn .fas {
+    font-size: 1rem;
+  }
+  .lead {
+    font-size: 1rem;
+  }
   .display-1 {
     font-size: 1.9rem;
   }
   .display-5 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   #overlay {
     padding: 20px;
