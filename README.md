@@ -1,6 +1,6 @@
 ## Main Page :
-tabs  - Events, Schedule ( Workshops), About, Signin logo
-events in blocks - events m 3 options ( Register, Explore more, PS)
+NavBar  - Events, Schedule , About, Signin
+Events in blocks - events m 2 options ( Register, Explore more)
 about
 
 ## Sign In Page
@@ -15,8 +15,10 @@ Events schedule
 Team Name
 Number of team members
 Team Members ( should have an account already )
+Hackerrank id/ Kaggle id : for codigo/recognizance only
 
 ## Personal Page :
 User personal Information
+Team join request
 Events registered in with team info
 delete registration in any event
