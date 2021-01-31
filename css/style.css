@@ -117,7 +117,10 @@ a:hover {
   padding: 0px 0 20px 0;
   
 }
-
+.footer-social {
+  display: flex;
+  align-items: center;
+}
 .footer-social a {
   margin: 0 10px;
   color: #bbb;
@@ -139,6 +142,12 @@ a:hover {
 #copyright {
   font-size: 15px;
   color: grey;
+}
+
+@media (max-width: 1300px) {
+  #footer .container {
+    min-width: 90%;
+  }
 }
 
 @media (max-width: 700px) {
