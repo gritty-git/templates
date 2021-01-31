@@ -5,13 +5,22 @@
   padding: 0;
 }
 
+h1 {
+  color: inherit!important;
+}
+
 body {
   overflow-x: hidden;
   font-family: 'Quicksand', sans-serif;
 }
 
+a {
+  color: inherit;
+}
+
 a:hover {
   text-decoration: none;
+  color: inherit;
 }
 
 #navbar {
@@ -20,7 +29,7 @@ a:hover {
   justify-content: flex-end;
   display: flex;
   width: 100%;
-  padding: 30px 40px;
+  padding: 20px 40px;
   transition: all ease 0.8s;
 }
 
@@ -55,14 +64,14 @@ a:hover {
 }
 
 #bg-video {
-  z-index: -1;
+  z-index: -100;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 1;
+  /* opacity: 0.8; */
 }
 
 #overlay {
@@ -73,12 +82,12 @@ a:hover {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.48);
-  mix-blend-mode: overlay;
+  /* mix-blend-mode: overlay; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 50px;
-  color: white;
+  color: white!important;
 }
 
 #get-started {
@@ -105,8 +114,14 @@ a:hover {
   padding: 120px 40px;
 }
 
+#footer {
+  background-color: #fff;
+  /* position: fixed; */
+  width: 100%;
+  bottom: 0;
+}
 .footer-top {
-  padding: 60px 0 40px 0;
+  padding: 15px 0 15px 0;
   text-align: left;
 }
 .footer-top h3 {
@@ -117,7 +132,10 @@ a:hover {
   padding: 0px 0 20px 0;
   
 }
-
+.footer-social {
+  display: flex;
+  align-items: center;
+}
 .footer-social a {
   margin: 0 10px;
   color: #bbb;
@@ -141,12 +159,109 @@ a:hover {
   color: grey;
 }
 
+#back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.5rem;
+}
+
+#back-btn .msg {
+  transition: all 0.2s ease-in;
+}
+
+#back-btn:hover .msg {
+  margin-left: 10px!important;
+}
+
+#back-btn .fas {
+  font-size: 21px;
+}
+
+#sign-up-container {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px);
+  /* position: relative; */
+}
+
+#sign-up-container .row {
+  width: 100%;
+  max-width: 1500px!important;
+  padding: 0;
+  margin: 0;
+}
+
+#sign-up-container .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#sign-up-container .col-lg-7 {
+  padding-right: 90px!important;
+  align-items: flex-start;
+}
+
+#sign-up-container .col-lg-7 .lead {
+  margin-top: 20px;
+}
+
+#sign-up-form {
+  max-width: 450px;
+  width: 95%;
+}
+
+#sign-up-form .text-muted {
+  font-size: 0.8rem;
+}
+
+.form-control {
+  background-color: #e6efff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus, .form-control:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1200px) {
+  #footer .container {
+    min-width: 90%;
+  }
+}
+
+@media (max-width: 1000px) {
+  #sign-up-container .col-lg-7 {
+    display: none;
+  }
+}
+
 @media (max-width: 700px) {
+  #sign-up-container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+  #back-btn .msg {
+    font-size: 1.3rem;
+  }
+  #back-btn .fas {
+    font-size: 1rem;
+  }
+  .lead {
+    font-size: 1rem;
+  }
   .display-1 {
     font-size: 1.9rem;
   }
   .display-5 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   #overlay {
     padding: 20px;
@@ -163,10 +278,7 @@ a:hover {
   }
   #department {
     width: 100%;
-    margin-top: 40px;
-  }
-  .footer-bottom {
-    padding: 0px 0 30px 0;
+    margin-top: 10px;
   }
   .footer-social{
     display: flex;
