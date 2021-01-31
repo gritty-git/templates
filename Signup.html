@@ -27,11 +27,16 @@
                     <input type="hidden" name="csrfmiddlewaretoken" value="ypyX7bGZAoaQuUZIYGGwA9RLIeYbxdWaSn71Hd5ZCtkNre7weiUEOqNC0TsMbxzB">
                     <fieldset>
                         <div class="form-group">
-                            <input placeholder="Enter a username" class="form-control form-control-sm" type="text" name="username" maxlength="150" autofocus="" required="" id="id_username">
-                            <span class="text-muted helptext">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</span>
+                            <input class="form-control form-control-sm" placeholder="Enter your name" type="text" name="name" maxlength="100" required="" id="id_name">
                         </div>
                         <div class="form-group">
                             <input placeholder="Enter your email ID" class="form-control form-control-sm" type="email" name="email" required="" id="id_email">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control form-control-sm" placeholder="Enter institute name" type="text" name="institute" maxlength="250" required="" id="id_institute">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control form-control-sm" placeholder="Enter year of study" type="number" name="year" required="" id="id_year">
                         </div>
                         <div class="form-group">
                             <input placeholder="Enter password" class="form-control-sm form-control" type="password" name="password1" autocomplete="new-password" required="" id="id_password1">
@@ -47,15 +52,8 @@
                         <div class="form-group">
                             <input placeholder="Password confirm" class="form-control form-control-sm" type="password" name="password2" autocomplete="new-password" required="" id="id_password2">
                         </div>
-                        <div class="form-group">
-                            <input class="form-control form-control-sm" placeholder="Enter your name" type="text" name="name" maxlength="100" required="" id="id_name">
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control form-control-sm" placeholder="Enter institute name" type="text" name="institute" maxlength="250" required="" id="id_institute">
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control form-control-sm" placeholder="Enter year of study" type="number" name="year" required="" id="id_year">
-                        </div>
+                        
+                        
                     </fieldset>
                     <button class="btn btn-block btn-info" type="submit" ,="" value="Signup">Signup</button>
                 </form>   
