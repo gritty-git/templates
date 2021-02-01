@@ -321,6 +321,27 @@ a:hover {
   font-size: 0.8rem;
 }
 
+.signIn-register {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  justify-content: center;
+}
+
+.signIn-register span {
+  font-size: 1rem;
+  margin-right: 5px;
+  letter-spacing: 1px;
+}
+
+.signIn-register a {
+  font-size: 1rem;
+  margin-left: 5px;
+  color: #47a0ad;
+  font-style: italic;
+  font-weight: bold;
+}
+
 .forgot-password {
   font-size: 14px;
   margin: 5px;
