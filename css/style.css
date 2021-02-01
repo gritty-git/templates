@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 * {
@@ -37,6 +38,10 @@ a:hover {
 }
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+#navbar.scrolled {
+  background-color: #fff;
+  
 }
 
 .custom-toggler.navbar-toggler {
@@ -122,6 +127,47 @@ a:hover {
   background-color: #ccc;
   padding: 120px 40px;
 }
+
+/* events section */
+
+.events-cards{
+  padding: 2%;
+  color : white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.card.event-card{
+  padding: 0.5%;
+  margin: 20px auto;
+  width: 45%;
+  height: 30%;
+  border-radius: 5px;
+  color: black;
+  text-align: left;
+  transition : transform 1s;
+}
+
+.event-card:hover{
+  transition : transform 1s;
+  transform: scale(1.03);
+  box-shadow: 2px 4px 8px rgb(117, 117, 117);
+}
+.event-img{
+  background: grey;
+}
+
+.event-btns{
+  padding: 0 10px;
+}
+
+.event-btns > .btn{
+  border-radius: 2px;
+}
+/* end events section */
+
 
 #footer {
   background-color: #fff;
@@ -363,3 +409,48 @@ a:hover {
     vertical-align: middle;
   }
 }
+
+@media (max-width: 1200px) and (min-width: 1000px){
+  .events-cards{
+    padding : 0px;
+  }
+  .content2{
+    padding: 2%;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 0px){
+  .events-cards{
+    padding: 0px;
+  }
+  .events-cards{
+    flex-direction: column;
+  }
+  .card.event-card{
+    width:90%;
+  }
+}
+
+/* scroll-bar */
+/* width */
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(85, 85, 85);
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* end scroll bar */
