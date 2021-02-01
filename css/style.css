@@ -241,6 +241,12 @@ a:hover {
   #sign-up-container .col-lg-7 {
     display: none;
   }
+
+  #department {
+    width: 400px;
+    margin-top: 10px;
+  }
+
 }
 
 @media (max-width: 700px) {
