@@ -1,5 +1,5 @@
-const navbar = document.getElementById('navbar');
-const navbarItems = document.querySelectorAll('.navbar-item');
+const navbar = document.querySelector('.navbar');
+const navbarItems = document.querySelectorAll('.nav-item');
 
 window.onscroll = () => {
     if (window.scrollY > 250) {
