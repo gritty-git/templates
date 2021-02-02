@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 1000,
+            speedAsDuration: true
+        });
+    </script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JavaScript Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+
+
+ /*underline animation on hover*/
+ .box {
+  display: flex;
+  width: 70%;
+  height: 8px;
+  margin: 5px 0px 60px 0px;
+  padding-left: 25%;
+}
+
+.box-sm {
+  height: 8px;
+  margin: 0;
+  flex-grow: 1;
+  transition: all .8s ease-in-out;
+  cursor: pointer;
+}
+
+.box-sm:hover {
+  flex-grow: 12;
+}
+
+.red {
+  background-color: #FF5852;
+}
+
+.orange {
+  background-color: #FF9000;
+}
+
+.yellow {
+  background-color: #FFD300;
+}
+
+.green {
+  background-color: #3DCD49;
+}
+
+.blue {
+  background-color: #0089D7;
+}
+
+.purple {
+  background-color: #9E44C4;
+}
+
+
+
+/*section header*/
+.section-header{
+    text-align: center;
+}
+.headings{
+  font-size: 60px;
+	margin: 1em 0 .6em 0;
+	font-weight: normal;
+	font-family: 'Hammersmith One', sans-serif;
+	text-shadow: 0 -1px 0 rgba(246, 252, 253, 0.4);
+	position: relative;
+	color: rgb(3, 18, 226);
+}
+
+/*general*/
+img{
+ 
+  width: 40%;
+  border-radius: 50px;
+}
+body {
+        background-color: rgb(177, 216, 243);
+        color: rgba(16, 58, 245, 0.9);
+        font-family: "Nunito Sans", sans-serif;
+    }
+.col{
+  text-align: center;
+  align-self: center;
+  font-size: 18px;
+}
+.container{
+  padding: 2%;
+}
+
+.timeline{
+  padding-left: 10%;
+  width: 90%;
+}
+.previous-workshop{
+  color:black;
+}
+.Next-workshop{
+  color:black;  
+}
+
+
+
+.single-timeline {
+         background-color: rgb(220, 255, 247);
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+          transition: 0.4s;
+          border-radius: 30px;
+          font-family: "Montserrat", sans-serif;
+          align-content: center;
+          
+        }
+
+.shadow-box:hover {
+            box-shadow: 0 1px 20px #556b6e;
+        }    
+
+
+
+/*Timeline*/
+
+
+.timeline div {
+  padding :0px;
+  height: 40px;
+}
+.timeline hr {
+  border-top: 3px solid  #53030e;
+
+  margin: 0;
+  top: 17px;
+  position: relative;
+}
+.timeline .col-2 {
+  display: flex;
+  overflow: hidden;
+}
+.timeline .corner {
+  border: 3px solid #010938;
+  width: 100%;
+  position: relative;
+  border-radius: 15px;
+}
+.timeline .top-right {
+  left: 50%;
+  top: -50%;
+}
+.timeline .left-bottom {
+  left: -50%;
+  top: calc(50% - 3px);
+}
+.timeline .top-left {
+  left: -50%;
+  top: -50%;
+}
+.timeline .right-bottom {
+  left: 50%;
+  top: calc(50% - 3px);
+}
+
+      
+
+</style>
+</head>
+<body>
+  
+    <div id="app"></div>
+     <script type="text/babel">
+      class ScheduleHeading extends React.Component{
+           render(){
+               return(
+                <section class="section">
+                    <div class="section-header">
+                        <strong><h2 class="headings">Event Schedule</h2></strong>
+                        
+                    </div>
+                </section>
+               )
+           }
+      }
+      class Navbar extends React.Component{
+           render(){
+               return(
+                  <nav class="navbar fixed-top navbar-expand-lg">
+        <div class="container">
+
+            <button class="navbar-toggler custom-toggler float-xs-right ml-auto" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+     
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <a href="#top-section" class="nav-link nav-item active">Home</a>
+                    <a href="#about" class="nav-link nav-item">About</a>
+                    <a href="#events" class="nav-link nav-item">Events</a>
+                    <a href="#" class="nav-link nav-item">Workshops</a>
+                    <a href="./signIn.html" class="nav-link nav-item">Sign In</a>
+                    <a href="./Signup.html" class="nav-link nav-item">Register</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+               )
+           }
+      }
+      
+
+      class Event1 extends React.Component{
+          render(){
+              return(
+                
+                <div class="container single-timeline shadow-box">
+                      <div class="row">
+                        <div class="col">
+                         <div>
+                          
+                            <ul>
+                             <li>
+                                <img src="./gallery/codigo.jpeg" />
+                            <div class="image-header">
+                                <h3><b>Codigo</b></h3>
+                            </div>
+                                
+                            </li>
+                            <span class=" time" aria-hidden="true">Feb 14</span>
+                            </ul>
+                         </div>
+
+                        </div>
+                        <div class="col">
+                        
+                          <div class="previous-workshop">
+                            <h4>Previous Workshops</h4>
+                              <ul>
+
+                                <li>
+                                    <a href="#">Inroduction to STL</a>
+                                </li>
+                                <li>
+                                    <a href="#">Inroduction to STL</a>
+                                </li>
+                                <li>
+                                    <a href="#">Inroduction to STL</a>
+                                </li>
+                              </ul>
+                          </div>
+                        </div>
+                        <div class="col">
+                            <div class="Next-workshop">
+                              <h4>Upcoming Workshops</h4>
+                              <ul>
+
+                                <li>
+                                    <a href="#">Graphs-Djikstra</a><br/>
+                                    <small><cite>Feb 12 | 10:AM</cite></small>
+                                    
+                                </li>
+                              </ul>
+                          </div>
+                     </div>
+                      </div>
+                    </div>
+                
+              )
+          }
+      }
+
+      class Event2 extends React.Component{
+          render(){
+              return(
+                <div class="container single-timeline shadow-box">
+                      <div class="row">
+                        <div class="col">
+                         <div>
+                            <ul>
+                             <li>
+                                <img src="./gallery/codigo.jpeg" />
+                            <div class="image-header">
+                                <h3><b>CryptX</b></h3>
+                            </div>
+                                
+                            </li>
+                            <span class=" time" aria-hidden="true">Feb 14</span>
+                            </ul>
+                         </div>
+
+                        </div>
+                        <div class="col " >
+                          <div class="previous-workshop">
+                            <h4>Previous Workshops</h4>
+                              <ul>
+
+                                <li>
+                                    <a href="#">Inroduction to STL</a>
+                                </li>
+                                <li>
+                                    <a href="#">Inroduction to STL</a>
+                                </li>
+                                <li>
+                                    <a href="#">Inroduction to STL</a>
+                                </li>
+                              </ul>
+                          </div>
+                        </div>
+                        <div class="col">
+                            <div class="Next-workshop">
+                              <h4>Upcoming Workshops</h4>
+                              <ul>
+
+                                <li>
+                                    <a href="#">Graphs-Djikstra</a><br/>
+                                    <small><cite>Feb 12 | 10:AM</cite></small>
+                                </li>
+                              </ul>
+                          </div>
+                     </div>
+                      </div>
+                    </div>
+              )
+          }
+      }
+      class Event3 extends React.Component{
+          render(){
+              return(
+                <div class="container single-timeline shadow-box">
+                      <div class="row">
+                        <div class="col">
+                         <div>
+                            <ul>
+                             <li>
+                                <img src="./gallery/codigo.jpeg" />
+                            <div class="image-header">
+
+                                <h3><b>Simulim</b></h3>
+                            </div>
+                                
+                            </li>
+                            <span class=" time" aria-hidden="true">Feb 14</span> 
+                            </ul>
+                         </div>
+
+                        </div>
+                       
+                        <div class="col">
+                          
+                          <div class="previous-workshop">
+                            <h4>Previous Workshops</h4>
+                              <ul>
+
+                                <li>
+                                    <a href="#">Inroduction to STL</a>
+                                </li>
+                                <li>
+                                    <a href="#">Inroduction to STL</a>
+                                </li>
+                                <li>
+                                    <a href="#">Inroduction to STL</a>
+                                </li>
+                              </ul>
+                          </div>
+                        </div>
+                        <div class="col">
+                            <div class="Next-workshop">
+                              <h4>Upcoming Workshops</h4>
+                              <ul>
+
+                                <li>
+                                    <a href="#">Graphs-Djikstra</a>
+                                    <br/>
+                                    <small><cite>Feb 12 | 10:AM</cite></small>
+                                </li>
+                              </ul>
+                          </div>
+                     </div>
+                      </div>
+                    </div>
+              )
+          }
+      }
+      class Event4 extends React.Component{
+          render(){
+              return(
+                
+                <div class="container single-timeline shadow-box">
+                      <div class="row">
+                        <div class="col">
+                         <div>
+                            <ul>
+                             <li>
+                                <img src="./gallery/codigo.jpeg" />
+                            <div class="image-header">
+                                <h3><b>Recognizance</b></h3>
+                            </div>
+                                
+                            </li>
+                            <span class=" time" aria-hidden="true">Feb 14</span> 
+                            </ul>
+                         </div>
+
+                        </div>
+                        <div class="col">
+                          <div class="previous-workshop">
+                            <h4>Previous Workshops</h4>
+                              <ul>
+
+                                <li>
+                                    <a href="#">Inroduction to STL</a>
+                                </li>
+                                <li>
+                                    <a href="#">Inroduction to STL</a>
+                                </li>
+                                <li>
+                                    <a href="#">Inroduction to STL</a>
+                                </li>
+                              </ul>
+                          </div>
+                        </div>
+                        <div class="col">
+                            <div class="Next-workshop">
+                              <h4>Upcoming Workshops</h4>
+                              <ul>
+
+                                <li>
+                                    <a href="#">Graphs-Djikstra</a><br/>
+                                    <small><cite>Feb 12 | 10:AM</cite></small>
+                                    
+                                </li>
+                              </ul>
+                          </div>
+                     </div>
+                      </div>
+                    </div>
+                
+              )
+          }
+      }
+      class Event5 extends React.Component{
+          render(){
+              return(
+                
+                <div class="container single-timeline shadow-box">
+                      <div class="row">
+                        <div class="col">
+                         <div>
+                            <ul>
+                             <li>
+                            <img src="./gallery/codigo.jpeg" />
+                            <div class="image-header">
+                                <h3><b>Consilium</b></h3>
+                            </div>
+                                
+                            </li>
+                            <span class=" time" aria-hidden="true">Feb 14</span>
+                            </ul>
+                         </div>
+
+                        </div>
+                        <div class="col">
+                          <div class="previous-workshop">
+                            <h4>Previous Workshops</h4>
+                              <ul>
+
+                                <li>
+                                    <a href="#">Inroduction to STL</a>
+                                </li>
+                                <li>
+                                    <a href="#">Inroduction to STL</a>
+                                </li>
+                                <li>
+                                    <a href="#">Inroduction to STL</a>
+                                </li>
+                              </ul>
+                          </div>
+                        </div>
+                        <div class="col">
+                            <div class="Next-workshop">
+                              <h4>Upcoming Workshops</h4>
+                              <ul>
+
+                                <li>
+                                    <a href="#">Graphs-Djikstra</a><br/>
+                                    <small><cite>Feb 12 | 10:AM</cite></small>
+                                    
+                                </li>
+                              </ul>
+                          </div>
+                     </div>
+                      </div>
+                    </div>
+                
+              )
+          }
+      }
+       class Box extends React.Component{
+         render(){
+           return(
+            <div class="box">
+            <div class="box-sm red"></div>
+            <div class="box-sm orange"></div>
+            <div class="box-sm yellow "></div>
+            <div class="box-sm green "></div>
+            <div class="box-sm blue "></div>
+            <div class="box-sm purple"></div>
+            </div>
+           )
+         }
+       }
+       class Timeline1 extends React.Component{
+         render(){
+           return(
+            <div class="row timeline">
+            <div class="col-2">
+            <div class="corner top-right"></div>
+            </div>
+            <div class="col-8">
+            <hr/>
+            </div>
+            <div class="col-2">
+            <div class="corner left-bottom"></div>
+            </div>
+            </div>
+           )
+         }
+       }
+       class Timeline2 extends React.Component{
+         render(){
+           return(
+            <div class="row timeline">
+           <div class="col-2">
+           <div class="corner right-bottom"></div>
+           </div>
+          <div class="col-8">
+          <hr/>
+           </div>
+           <div class="col-2">
+          <div class="corner top-left"></div>
+         </div>
+    </div>
+           )
+         }
+       }
+       class Footer extends React.Component{
+         render(){
+           return(
+            <footer id="footer">
+           <div class="footer-top">
+      <div class="container">
+          <div class="row mr-auto">
+              <div class="col footer-social">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a> 
+                  <a href="#"><i class="fab fa-twitter"></i></a> 
+                  <a href="#"><i class="fab fa-instagram"></i></a> 
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+              </div>
+              <div class="m-2">
+                  <img src='./gallery/Department.png' id="department"/>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+           )
+         }
+       }
+      
+       class App extends React.Component{
+          render(){
+              return(
+                  <div>
+                    <Navbar/>
+                    <br/><br/>
+                    <ScheduleHeading/> 
+                    <Box/>
+                    <Event1/>
+                   <Timeline1/>
+                    <Event2/>
+                    <Timeline2/>
+                    <Event3/>
+                    <Timeline1/>
+                    <Event4/>
+                    <Timeline2/>
+                    <Event5/>
+                    <br/>
+                    <Footer/>
+                    
+                  </div>
+              );
+          }
+       }
+        
+         ReactDOM.render(<App/>,document.querySelector("#app"));
+    </script>
+
+</body>
+
+
+
+</html>
