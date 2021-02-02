@@ -50,6 +50,11 @@
             action="/users/signin/%7Busers:usersignin%7D"
             method="POST"
           >
+            <input
+              type="hidden"
+              name="csrfmiddlewaretoken"
+              value="ypyX7bGZAoaQuUZIYGGwA9RLIeYbxdWaSn71Hd5ZCtkNre7weiUEOqNC0TsMbxzB"
+            />
             <fieldset>
               <div class="form-group">
                 <input
@@ -73,6 +78,18 @@
                   required=""
                   id="id_password1"
                 />
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                  "
+                >
+                  <a class="forgot-password" href="./recovery.html"
+                    >Forgot Password?</a
+                  >
+                </div>
+              </div>
             </fieldset>
             <button
               class="btn btn-block btn-info"
@@ -82,6 +99,10 @@
             >
               Sign In
             </button>
+            <div class="signIn-register">
+              <span>Not registered?</span>
+              <a href="./Signup.html">Create an Account</a>
+            </div>
           </form>
         </div>
       </div>
