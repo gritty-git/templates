@@ -33,52 +33,6 @@
     <style>
 
 
- /*underline animation on hover*/
- .box {
-  display: flex;
-  width: 70%;
-  height: 8px;
-  margin: 5px 0px 60px 0px;
-  padding-left: 25%;
-}
-
-.box-sm {
-  height: 8px;
-  margin: 0;
-  flex-grow: 1;
-  transition: all .8s ease-in-out;
-  cursor: pointer;
-}
-
-.box-sm:hover {
-  flex-grow: 12;
-}
-
-.red {
-  background-color: #FF5852;
-}
-
-.orange {
-  background-color: #FF9000;
-}
-
-.yellow {
-  background-color: #FFD300;
-}
-
-.green {
-  background-color: #3DCD49;
-}
-
-.blue {
-  background-color: #0089D7;
-}
-
-.purple {
-  background-color: #9E44C4;
-}
-
-
 
 
 
@@ -150,8 +104,8 @@ body {
     #ffffff 20%, 
     #ffffff 60%
   );
-          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-          transition: 0.4s;
+          box-shadow: 0 4px 8px 0 rgba(24, 2, 2, 0.24);
+          transition: 0.5s;
           border-radius: 30px;
           font-family: "Montserrat", sans-serif;
           align-content: center;
@@ -160,7 +114,8 @@ body {
         
 
 .shadow-box:hover {
-            box-shadow: 0 1px 20px #556b6e;
+            box-shadow: 0 1px 40px #556b6e;
+          
         }    
 
 
@@ -211,394 +166,296 @@ body {
 </style>
 </head>
 <body>
-  
-  
-    <div id="app"></div>
-     <script type="text/babel">
-      class ScheduleHeading extends React.Component{
-           render(){
-               return(
-                <section class="section">
-                    <div class="section-header">
-                        <strong><h2 class="headings">Event Schedule</h2></strong>
-                        
-                    </div>
-                </section>
-               )
-           }
-      }
-      
+  <div class="my-schedule">
+    <section class="section">
+      <div class="section-header">
+          <strong><h2 class="headings">Event Schedule</h2></strong>
+          
+      </div>
+     </section>
+<!--events starts from here -->
+<div class="container single-timeline shadow-box event-name" >
+  <div class="row">
+    <div class="col">
+     <div >
+        <ul class="event--image">
+         <li>
+            <img src="./gallery/codigo.jpeg" />
+        <div class="image-header">
+            <h3><b>  Codigo </b></h3>
+        </div>
+            
+        </li>
+        <span class=" time" aria-hidden="true">Feb 14</span>
+        </ul>
+     </div>
 
-      class Event1 extends React.Component{
-          render(){
-              return(
-                
-                <div class="container single-timeline shadow-box event-name" >
-                      <div class="row">
-                        <div class="col">
-                         <div >
-                            <ul class="event--image">
-                             <li>
-                                <img src="./gallery/codigo.jpeg" />
-                            <div class="image-header">
-                                <h3><b> Codigo </b></h3>
-                            </div>
-                                
-                            </li>
-                            <span class=" time" aria-hidden="true">Feb 14</span>
-                            </ul>
-                         </div>
-
-                        </div>
-                        <div class="col " >
-                          <div class="previous-workshop">
-                            <div class="prev_workshop">
-                            Previous Workshops
-                            </div>
-                              <ul>
-
-                                <li>
-                                    <a href="#">Inroduction to STL</a>
-                                </li>
-                                <li>
-                                    <a href="#">Inroduction to STL</a>
-                                </li>
-                                <li>
-                                    <a href="#">Inroduction to STL</a>
-                                </li>
-                              </ul>
-                          </div>
-                        </div>
-                        <div class="col">
-                            <div class="Next-workshop">
-                              <div class="up_workshop">
-                            Upcoming workshops
-                            </div>
-                              <ul>
-
-                                <li>
-                                    <a href="#">Graphs-Djikstra</a><br/>
-                                    <small><cite>Feb 12 | 10:AM</cite></small>
-                                </li>
-                              </ul>
-                          </div>
-                     </div>
-                      </div>
-                    </div>
-                
-              )
-          }
-      }
-
-      class Event2 extends React.Component{
-          render(){
-              return(
-                <div class="container single-timeline shadow-box event-name" >
-                      <div class="row">
-                        <div class="col">
-                         <div >
-                            <ul class="event--image">
-                             <li>
-                                <img src="./gallery/codigo.jpeg" />
-                            <div class="image-header">
-                                <h3><b>CryptX</b></h3>
-                            </div>
-                                
-                            </li>
-                            <span class=" time" aria-hidden="true">Feb 14</span>
-                            </ul>
-                         </div>
-
-                        </div>
-                        <div class="col " >
-                          <div class="previous-workshop">
-                            <div class="prev_workshop">
-                            Previous Workshops
-                            </div>
-                              <ul>
-
-                                <li>
-                                    <a href="#">Inroduction to STL</a>
-                                </li>
-                                <li>
-                                    <a href="#">Inroduction to STL</a>
-                                </li>
-                                <li>
-                                    <a href="#">Inroduction to STL</a>
-                                </li>
-                              </ul>
-                          </div>
-                        </div>
-                        <div class="col">
-                            <div class="Next-workshop">
-                              <div class="up_workshop">
-                            Upcoming workshops
-                            </div>
-                              <ul>
-
-                                <li>
-                                    <a href="#">Graphs-Djikstra</a><br/>
-                                    <small><cite>Feb 12 | 10:AM</cite></small>
-                                </li>
-                              </ul>
-                          </div>
-                     </div>
-                      </div>
-                    </div>
-              )
-          }
-      }
-      class Event3 extends React.Component{
-          render(){
-              return(
-                <div class="container single-timeline shadow-box event-name" >
-                      <div class="row">
-                        <div class="col">
-                         <div >
-                            <ul class="event--image">
-                             <li>
-                                <img src="./gallery/codigo.jpeg" />
-                            <div class="image-header">
-                                <h3><b>simulim</b></h3>
-                            </div>
-                                
-                            </li>
-                            <span class=" time" aria-hidden="true">Feb 14</span>
-                            </ul>
-                         </div>
-
-                        </div>
-                        <div class="col " >
-                          <div class="previous-workshop">
-                            <div class="prev_workshop">
-                            Previous Workshops
-                            </div>
-                              <ul>
-
-                                <li>
-                                    <a href="#">Inroduction to STL</a>
-                                </li>
-                                <li>
-                                    <a href="#">Inroduction to STL</a>
-                                </li>
-                                <li>
-                                    <a href="#">Inroduction to STL</a>
-                                </li>
-                              </ul>
-                          </div>
-                        </div>
-                        <div class="col">
-                            <div class="Next-workshop">
-                              <div class="up_workshop">
-                            Upcoming workshops
-                            </div>
-                              <ul>
-
-                                <li>
-                                    <a href="#">Graphs-Djikstra</a><br/>
-                                    <small><cite>Feb 12 | 10:AM</cite></small>
-                                </li>
-                              </ul>
-                          </div>
-                     </div>
-                      </div>
-                    </div>
-              )
-          }
-      }
-      class Event4 extends React.Component{
-          render(){
-              return(
-                <div class="container single-timeline shadow-box event-name" >
-                      <div class="row">
-                        <div class="col">
-                         <div >
-                            <ul class="event--image">
-                             <li>
-                                <img src="./gallery/codigo.jpeg" />
-                            <div class="image-header">
-                                Consilium
-                            </div>
-                                
-                            </li>
-                            <span class=" time" aria-hidden="true">Feb 14</span>
-                            </ul>
-                         </div>
-
-                        </div>
-                        <div class="col " >
-                          <div class="previous-workshop">
-                            <div class="prev_workshop">
-                            Previous Workshops
-                            </div>
-                              <ul>
-
-                                <li>
-                                    <a href="#">Inroduction to STL</a>
-                                </li>
-                                <li>
-                                    <a href="#">Inroduction to STL</a>
-                                </li>
-                                <li>
-                                    <a href="#">Inroduction to STL</a>
-                                </li>
-                              </ul>
-                          </div>
-                        </div>
-                        <div class="col">
-                            <div class="Next-workshop">
-                              <div class="up_workshop">
-                            Upcoming workshops
-                            </div>
-                              <ul>
-
-                                <li>
-                                    <a href="#">Graphs-Djikstra</a><br/>
-                                    <small><cite>Feb 12 | 10:AM</cite></small>
-                                </li>
-                              </ul>
-                          </div>
-                     </div>
-                      </div>
-                    </div>
-                
-              )
-          }
-      }
-      class Event5 extends React.Component{
-          render(){
-              return(
-                
-                <div class="container single-timeline shadow-box event-name" >
-                      <div class="row">
-                        <div class="col">
-                         <div >
-                            <ul class="event--image">
-                             <li>
-                                <img src="./gallery/codigo.jpeg" />
-                            <div class="image-header">
-                                <h3><b>Recognizance</b></h3>
-                            </div>
-                                
-                            </li>
-                            <span class=" time" aria-hidden="true">Feb 14</span>
-                            </ul>
-                         </div>
-
-                        </div>
-                        <div class="col " >
-                          <div class="previous-workshop">
-                            <div class="prev_workshop">
-                            Previous Workshops
-                            </div>
-                              <ul>
-
-                                <li>
-                                    <a href="#">Inroduction to STL</a>
-                                </li>
-                                <li>
-                                    <a href="#">Inroduction to STL</a>
-                                </li>
-                                <li>
-                                    <a href="#">Inroduction to STL</a>
-                                </li>
-                              </ul>
-                          </div>
-                        </div>
-                        <div class="col">
-                            <div class="Next-workshop">
-                              <div class="up_workshop">
-                            Upcoming workshops
-                            </div>
-                              <ul>
-
-                                <li>
-                                    <a href="#">Graphs-Djikstra</a><br/>
-                                    <small><cite>Feb 12 | 10:AM</cite></small>
-                                </li>
-                              </ul>
-                          </div>
-                     </div>
-                      </div>
-                    </div>
-              )
-          }
-      }
-       class Box extends React.Component{
-         render(){
-           return(
-            <div class="box">
-            <div class="box-sm red"></div>
-            <div class="box-sm orange"></div>
-            <div class="box-sm yellow "></div>
-            <div class="box-sm green "></div>
-            <div class="box-sm blue "></div>
-            <div class="box-sm purple"></div>
-            </div>
-           )
-         }
-       }
-       class Timeline1 extends React.Component{
-         render(){
-           return(
-            <div class="row timeline">
-            <div class="col-2">
-            <div class="corner top-right"></div>
-            </div>
-            <div class="col-8">
-            <hr/>
-            </div>
-            <div class="col-2">
-            <div class="corner left-bottom"></div>
-            </div>
-            </div>
-           )
-         }
-       }
-       class Timeline2 extends React.Component{
-         render(){
-           return(
-            <div class="row timeline">
-           <div class="col-2">
-           <div class="corner right-bottom"></div>
-           </div>
-          <div class="col-8">
-          <hr/>
-           </div>
-           <div class="col-2">
-          <div class="corner top-left"></div>
-         </div>
     </div>
-           )
-         }
-       }
-      
-      
-       class App extends React.Component{
-          render(){
-              return(
-                  <div>
-                   
-                    <ScheduleHeading/> 
-                    <Box/>
-                    <Event1/>
-                   <Timeline1/>
-                    <Event2/>
-                    <Timeline2/>
-                    <Event3/>
-                    <Timeline1/>
-                    <Event4/>
-                    <Timeline2/>
-                    <Event5/>
-                   <br/>
-                    
-                  </div>
-              );
-          }
-       }
-        
-         ReactDOM.render(<App/>,document.querySelector("#app"));
-    </script>
+    <div class="col " >
+      <div class="previous-workshop">
+        <div class="prev_workshop">
+        Previous Workshops
+        </div>
+          <ul>
+
+            <li>
+                <a href="#">Inroduction to STL</a>
+            </li>
+            <li>
+                <a href="#">Inroduction to STL</a>
+            </li>
+            <li>
+                <a href="#">Inroduction to STL</a>
+            </li>
+          </ul>
+      </div>
+    </div>
+    <div class="col">
+        <div class="Next-workshop">
+          <div class="up_workshop">
+        Upcoming workshops
+        </div>
+          <ul>
+
+            <li>
+                <a href="#">Graphs-Djikstra</a><br/>
+                <small><cite>Feb 12 | 10:AM</cite></small>
+            </li>
+          </ul>
+      </div>
+ </div>
+  </div>
+</div>
+
+<br/>
+
+<!--This is second event-->
+
+<div class="container single-timeline shadow-box event-name" >
+  <div class="row">
+    <div class="col">
+     <div >
+        <ul class="event--image">
+         <li>
+            <img src="./gallery/codigo.jpeg" />
+        <div class="image-header">
+            <h3><b> cryptX </b></h3>
+        </div>
+            
+        </li>
+        <span class=" time" aria-hidden="true">Feb 14</span>
+        </ul>
+     </div>
+
+    </div>
+    <div class="col " >
+      <div class="previous-workshop">
+        <div class="prev_workshop">
+        Previous Workshops
+        </div>
+          <ul>
+
+            <li>
+                <a href="#">Inroduction to STL</a>
+            </li>
+            <li>
+                <a href="#">Inroduction to STL</a>
+            </li>
+            <li>
+                <a href="#">Inroduction to STL</a>
+            </li>
+          </ul>
+      </div>
+    </div>
+    <div class="col">
+        <div class="Next-workshop">
+          <div class="up_workshop">
+        Upcoming workshops
+        </div>
+          <ul>
+
+            <li>
+                <a href="#">Graphs-Djikstra</a><br/>
+                <small><cite>Feb 12 | 10:AM</cite></small>
+            </li>
+          </ul>
+      </div>
+ </div>
+  </div>
+</div>
+
+<br/>
+<!--And here comes the third one-->
+
+<div class="container single-timeline shadow-box event-name" >
+  <div class="row">
+    <div class="col">
+     <div >
+        <ul class="event--image">
+         <li>
+            <img src="./gallery/codigo.jpeg" />
+        <div class="image-header">
+            <h3><b>  RECOGNIZANCE </b></h3>
+        </div>
+            
+        </li>
+        <span class=" time" aria-hidden="true">Feb 14</span>
+        </ul>
+     </div>
+
+    </div>
+    <div class="col " >
+      <div class="previous-workshop">
+        <div class="prev_workshop">
+        Previous Workshops
+        </div>
+          <ul>
+
+            <li>
+                <a href="#">Inroduction to STL</a>
+            </li>
+            <li>
+                <a href="#">Inroduction to STL</a>
+            </li>
+            <li>
+                <a href="#">Inroduction to STL</a>
+            </li>
+          </ul>
+      </div>
+    </div>
+    <div class="col">
+        <div class="Next-workshop">
+          <div class="up_workshop">
+        Upcoming workshops
+        </div>
+          <ul>
+
+            <li>
+                <a href="#">Graphs-Djikstra</a><br/>
+                <small><cite>Feb 12 | 10:AM</cite></small>
+            </li>
+          </ul>
+      </div>
+ </div>
+  </div>
+</div>
+<br/>
+<!--the fourth one-->
+
+<div class="container single-timeline shadow-box event-name" >
+  <div class="row">
+    <div class="col">
+     <div >
+        <ul class="event--image">
+         <li>
+            <img src="./gallery/codigo.jpeg" />
+        <div class="image-header">
+            <h3><b>  simulim </b></h3>
+        </div>
+            
+        </li>
+        <span class=" time" aria-hidden="true">Feb 14</span>
+        </ul>
+     </div>
+
+    </div>
+    <div class="col " >
+      <div class="previous-workshop">
+        <div class="prev_workshop">
+        Previous Workshops
+        </div>
+          <ul>
+
+            <li>
+                <a href="#">Inroduction to STL</a>
+            </li>
+            <li>
+                <a href="#">Inroduction to STL</a>
+            </li>
+            <li>
+                <a href="#">Inroduction to STL</a>
+            </li>
+          </ul>
+      </div>
+    </div>
+    <div class="col">
+        <div class="Next-workshop">
+          <div class="up_workshop">
+        Upcoming workshops
+        </div>
+          <ul>
+
+            <li>
+                <a href="#">Graphs-Djikstra</a><br/>
+                <small><cite>Feb 12 | 10:AM</cite></small>
+            </li>
+          </ul>
+      </div>
+ </div>
+  </div>
+</div>
+
+<br/>
+<!--Fifth one-->
+
+<div class="container single-timeline shadow-box event-name" >
+  <div class="row">
+    <div class="col">
+     <div >
+        <ul class="event--image">
+         <li>
+            <img src="./gallery/codigo.jpeg" />
+        <div class="image-header">
+            <h3><b>  Consilium </b></h3>
+        </div>
+            
+        </li>
+        <span class=" time" aria-hidden="true">Feb 14</span>
+        </ul>
+     </div>
+
+    </div>
+    <div class="col " >
+      <div class="previous-workshop">
+        <div class="prev_workshop">
+        Previous Workshops
+        </div>
+          <ul>
+
+            <li>
+                <a href="#">Inroduction to STL</a>
+            </li>
+            <li>
+                <a href="#">Inroduction to STL</a>
+            </li>
+            <li>
+                <a href="#">Inroduction to STL</a>
+            </li>
+          </ul>
+      </div>
+    </div>
+    <div class="col">
+        <div class="Next-workshop">
+          <div class="up_workshop">
+        Upcoming workshops
+        </div>
+          <ul>
+
+            <li>
+                <a href="#">Graphs-Djikstra</a><br/>
+                <small><cite>Feb 12 | 10:AM</cite></small>
+            </li>
+          </ul>
+      </div>
+ </div>
+  </div>
+</div>
+<br/>
+
+
+    
+  </div>
+  
 
 </body>
 
