@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Teko:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <script src="js/main.js"></script>
@@ -38,11 +39,7 @@
 /*section header*/
 .section-header{
     text-align: center;
-}
-.headings{
-  color: #ffffff;
-  font-family: 'Bitter', serif; font-size: 50px; font-weight: normal; line-height: 54px; margin: 0 0 0px;
-
+    color:lightblue
 }
 
 /*general*/
@@ -52,9 +49,8 @@ img{
   border-radius: 50px;
 }
 body {
-       background-image: url("./gallery/event.jpg");
-        color: rgba(16, 58, 245, 0.9);
-        font-family: "Nunito Sans", sans-serif;
+       background-image: url("./gallery/event.jpeg");
+
     }
 .col{
   text-align: center;
@@ -97,7 +93,7 @@ body {
 .single-timeline {
   background: linear-gradient(
     to bottom, 
-    #23dbb3 0%, 
+    #05d7fc 0%  , 
     #02b38c 30%, 
     #ffffff 20%, 
     #ffffff 60%
@@ -112,52 +108,43 @@ body {
         
 
 .shadow-box:hover {
-            box-shadow: 0 1px 40px #556b6e;
+            box-shadow: 0 1px 40px #36c6e2;
           
         }    
 
 
 
-/*Timeline*/
+        h1 {
+    margin: 0;
+    padding-bottom: 0rem;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    font-family: 'Teko', sans-serif;
+    font-size: 7rem;
+    text-transform: uppercase;
+    animation: glow 1s ease-in-out infinite alternate;
+    text-align: center;
+  }
+  a {
+    font-family: 'Teko', sans-serif;
+    color: #1354df;
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    justify-self: center;
+    
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 30px #58a2b4;
+    }
+    to {
+      text-shadow: 0 0 30px #34b3c1, 0 0 10px #4dbbc7;
+    }
+  }
 
-
-.timeline div {
-  padding :0px;
-  height: 40px;
-}
-.timeline hr {
-  border-top: 3px solid  #53030e;
-
-  margin: 0;
-  top: 17px;
-  position: relative;
-}
-.timeline .col-2 {
-  display: flex;
-  overflow: hidden;
-}
-.timeline .corner {
-  border: 3px solid #010938;
-  width: 100%;
-  position: relative;
-  border-radius: 15px;
-}
-.timeline .top-right {
-  left: 50%;
-  top: -50%;
-}
-.timeline .left-bottom {
-  left: -50%;
-  top: calc(50% - 3px);
-}
-.timeline .top-left {
-  left: -50%;
-  top: -50%;
-}
-.timeline .right-bottom {
-  left: 50%;
-  top: calc(50% - 3px);
-}
 
       
 
@@ -167,7 +154,8 @@ body {
   <div class="my-schedule">
     <section class="section">
       <div class="section-header">
-          <strong><h2 class="headings">Event Schedule</h2></strong>
+        
+        <h1><span>S</span><span>C</span><span>H</span><span>E</span><span>D</span><span>U</span><span>L</span><span>E</span></h1>
           
       </div>
      </section>
@@ -194,18 +182,20 @@ body {
         <div class="prev_workshop">
         Previous Workshops
         </div>
-          <ul>
+        <div >
+          <ul >
 
             <li>
                 <a href="#">Inroduction to STL</a>
             </li>
-            <li>
+            <li >
                 <a href="#">Inroduction to STL</a>
             </li>
-            <li>
+            <li >
                 <a href="#">Inroduction to STL</a>
             </li>
           </ul>
+      </div>
       </div>
     </div>
     <div class="col">
